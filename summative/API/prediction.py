@@ -5,7 +5,7 @@ import joblib
 from fastapi.middleware.cors import CORSMiddleware
 
 # Load pre-trained model
-model = joblib.load('best_heart_disease_model.joblib')
+model = joblib.load('/Users/macbook/Desktop/Linear_Regression_Model/summative/best_heart_disease_model.joblib')
 
 # Initialize FastAPI
 app = FastAPI()
