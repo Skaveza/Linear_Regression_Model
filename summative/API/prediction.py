@@ -1,16 +1,16 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from typing import Union
 import joblib
 from fastapi.middleware.cors import CORSMiddleware
 
-# Load pre-trained model
-model = joblib.load('/Users/macbook/Desktop/Linear_Regression_Model/summative/best_heart_disease_model.joblib')
+# Load the pre-trained Decision Tree model at app startup
+model = joblib.load('/Users/macbook/Desktop/Linear_Regression_Model/summative/linear_regression/best_model.joblib')
 
 # Initialize FastAPI
 app = FastAPI()
 
-# Add CORS middleware to handle cross-origin requests
+# CORS middleware to handle cross-origin requests
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
@@ -18,26 +18,44 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Define the input data model with validation
 class PredictionRequest(BaseModel):
-    HighBP: int = Field(..., ge=0, le=1, description="0 for No, 1 for Yes")
-    BMI: float = Field(..., ge=10.0, le=70.0, description="BMI between 10 and 70")
-    Smoker: int = Field(..., ge=0, le=2, description="0 for Never, 1 for Rarely, 2 for Frequent")
-    Sex: int = Field(..., ge=0, le=1, description="0 for Female, 1 for Male")
+   Adult_Mortality: float = Field(..., gt=0, description="Must be greater than 0")
+   Schooling: float = Field(..., gt=0, description="Must be greater than 0")
+   Total_expenditure: float = Field(..., gt=0, description="Must be greater than 0")
+   BMI: float = Field(..., gt=0, description="Must be greater than 0")
 
 # Define the prediction endpoint
 @app.post("/predict/")
 async def predict(data: PredictionRequest):
     try:
         # Prepare input for the model
-        input_data = [[data.HighBP, data.BMI, data.Smoker, data.Sex]]
+        input_data = [[data.Adult_Mortality, data.Schooling, data.Total_expenditure, data.BMI]]
         
         # Make prediction
         prediction = model.predict(input_data)
         
+        prediction_value = prediction[0]
+        
+        if prediction_value > 80:  
+            life_expectancy = "High"
+        elif prediction_value > 60:
+            life_expectancy = "Moderate"
+        else:
+            life_expectancy = "Low"
+
         # Return response
         return {
-            "prediction": float(prediction[0]),
-            "risk_level": "High" if prediction[0] > 0.5 else "Low"
+            "prediction": float(prediction_value),
+            "life_expectancy": life_expectancy,
+            "description": "Life expectancy prediction based on provided health data."
         }
+    
     except Exception as e:
-        return {"error": str(e)}
+        raise HTTPException(status_code=400, detail=f"Error: {str(e)}")
+
+#health check endpoint for monitoring
+@app.get("/health/")
+async def health_check():
+    return {"status": "healthy"}
