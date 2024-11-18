@@ -77,7 +77,7 @@ Git
 
 Navigate to the Flutter app directory:
 
-    ```bash
+   ```bash
        cd flutter_app
 
 Get dependencies:
@@ -110,12 +110,10 @@ We welcome contributions to improve the app. To contribute:
 
 1.Fork the repository.
 2.Create a new branch:
-
-    ```bash
+```bash
        Copy code
         git checkout -b feature-name
-        Commit your changes and push the branch:
-
+        Commit your changes and push the branch
 
 ```bash
      Copy code
