@@ -63,32 +63,32 @@ Git
    python -m venv venv
    source venv/bin/activate
 
-5. Install the required dependencies:
+2. Install the required dependencies:
    
     ```bash
     pip install -r requirements.txt
     
-7. Start the FastAPI server:
+3. Start the FastAPI server:
    
    ```bash
      uvicorn predict:app --reload
 
-## Frontend Setup
+### FrontEnd Setup
+1. Navigate to the Flutter app directory:
+   
+   ```bash
+   cd flutter_app
+   
 
-Navigate to the Flutter app directory:
-
-    bash
-       cd flutter_app
-
-Get dependencies:
-
-    ```bash
-    flutter pub get
-
-Run the app:
-
-    ```bash
-    flutter run
+2. Get dependencies
+   
+   ```bash
+   flutter pub get
+    
+3. Run the app:
+   
+   ```bash
+     flutter run
 
 The app will launch on the connected device or emulator.
 
@@ -108,14 +108,14 @@ Risk level (e.g., "Low", "Moderate", "High")
 ## Contributing
 We welcome contributions to improve the app. To contribute:
 
-1.Fork the repository.
-2.Create a new branch:
-```bash
+1. Fork the repository.
+2. Create a new branch:
+
+   ```bash
        Copy code
         git checkout -b feature-name
         Commit your changes and push the branch
-
-```bash
+  ```bash
      Copy code
      git add .
      git commit -m "Description of changes"
