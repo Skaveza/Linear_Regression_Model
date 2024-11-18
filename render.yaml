@@ -3,5 +3,5 @@ services:
     name: fastapi-app
     env: python
     buildCommand: ""
-    startCommand: uvicorn summative.API.prediction:app --host 0.0.0.0 --port 8000
+    startCommand: uvicorn summative.API.predict:app --host 0.0.0.0 --port 8000
 

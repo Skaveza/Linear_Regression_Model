@@ -3,9 +3,13 @@ from pydantic import BaseModel, Field
 from typing import Union
 import joblib
 from fastapi.middleware.cors import CORSMiddleware
+import os
 
+
+current_dir = os.path.dirname(__file__)
+model_path = os.path.join(current_dir, "best_model.joblib")
 # Load the pre-trained Decision Tree model at app startup
-model = joblib.load('/Users/macbook/Desktop/Linear_Regression_Model/summative/linear_regression/best_model.joblib')
+model = joblib.load(model_path)
 
 # Initialize FastAPI
 app = FastAPI()
