@@ -55,7 +55,7 @@ Git
    
    ```bash
    git clone (https://github.com/Skaveza/Linear_Regression_Model.git)
-   cd linear_regression_model
+   cd Linear_Regression_Model
 
 3. Set up a virtual environment:
    
@@ -77,10 +77,54 @@ Git
 
 Navigate to the Flutter app directory:
 
-   ```bash
-   Copy code
-   cd flutter_app
-   Get dependencies:
+    ```bash
+       cd flutter_app
+
+Get dependencies:
+
+      ```bash
+    flutter pub get
+
+Run the app:
+
+    ```bash
+    flutter run
+
+The app will launch on the connected device or emulator.
+
+## How to Use the App
+
+# Input the health-related parameters:
+Adult Mortality
+Schooling
+Total Expenditure
+BMI
+
+Click **"Predict"**: The app sends the data to the backend API, which uses the Decision Tree model to calculate the prediction.
+View the Results:
+Predicted life expectancy
+Risk level (e.g., "Low", "Moderate", "High")
+
+## Contributing
+We welcome contributions to improve the app. To contribute:
+
+1.Fork the repository.
+2.Create a new branch:
+
+    ```bash
+       Copy code
+        git checkout -b feature-name
+        Commit your changes and push the branch:
+
+
+```bash
+     Copy code
+     git add .
+     git commit -m "Description of changes"
+     git push origin feature-name
+     Open a Pull Request.
+
+
 
 
 
