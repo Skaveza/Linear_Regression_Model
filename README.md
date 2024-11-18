@@ -1,5 +1,5 @@
 # Life Expectancy Prediction App
-
+.
 ## Mission Statement
 My mission is to integrate *technology* and *healthcare* to empower individuals and organizations with data-driven insights, improving the understanding and prediction of critical health outcomes such as life expectancy
 
