@@ -96,8 +96,11 @@ The app will launch on the connected device or emulator.
 
 # Input the health-related parameters:
 Adult Mortality
+
 Schooling
+
 Total Expenditure
+
 BMI
 
 Click **"Predict"**: The app sends the data to the backend API, which uses the Decision Tree model to calculate the prediction.
