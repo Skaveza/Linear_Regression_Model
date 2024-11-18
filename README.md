@@ -30,9 +30,13 @@ The dataset includes the following health-related indicators:
 Three machine learning models were evaluated during the development process:
 
 Linear Regression
+
 Random Forest
+
 Decision Tree
-After rigorous testing, the **Decision Tree model** emerged as the most accurate and reliable, with high performance in predicting life expectancy. This model was chosen for integration into the app.
+
+After rigorous testing, the **Decision Tree model** emerged as the most accurate and reliable, with high performance in predicting life expectancy.
+This model was chosen for integration into the app.
 
 ## Technology Stack
 The app leverages a robust backend and interactive frontend:
