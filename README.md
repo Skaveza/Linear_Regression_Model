@@ -77,12 +77,12 @@ Git
 
 Navigate to the Flutter app directory:
 
-   ```bash
+    bash
        cd flutter_app
 
 Get dependencies:
 
-      ```bash
+    ```bash
     flutter pub get
 
 Run the app:
