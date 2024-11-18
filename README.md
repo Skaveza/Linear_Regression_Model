@@ -120,6 +120,7 @@ We welcome contributions to improve the app. To contribute:
      git add .
      git commit -m "Description of changes"
      git push origin feature-name
+4.Open a Pull Request.
 
 
 
