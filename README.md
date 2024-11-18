@@ -47,7 +47,9 @@ The app leverages a robust backend and interactive frontend:
 Ensure the following tools are installed on your system:
 
 Python (Version 3.8 or later)
+
 Flutter (Stable version)
+
 Git
 
 ### Backend
@@ -104,8 +106,11 @@ Total Expenditure
 BMI
 
 Click **"Predict"**: The app sends the data to the backend API, which uses the Decision Tree model to calculate the prediction.
+
 View the Results:
+
 Predicted life expectancy
+
 Risk level (e.g., "Low", "Moderate", "High")
 
 ## Contributing
