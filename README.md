@@ -36,7 +36,7 @@ Life Expectancy	Adult Mortality	Schooling	Total Expenditure	BMI
 45.3	686.0	9.8	6.16	25.9
 
 
-*Machine Learning Model*
+**Machine Learning Model**
 
 
 Three machine learning models were evaluated during the development process:
@@ -46,14 +46,17 @@ Random Forest
 Decision Tree
 After rigorous testing, the Decision Tree model emerged as the most accurate and reliable, with high performance in predicting life expectancy. This model was chosen for integration into the app.
 
-Technology Stack
+**Technology Stack**
 The app leverages a robust backend and interactive frontend:
 
-Backend: Python with FastAPI for seamless API development and hosting.
-Frontend: Flutter for building a user-friendly interface that works across platforms.
-Machine Learning: Scikit-learn for training and deploying the Decision Tree model.
-App Setup and Deployment
-Prerequisites
+**Backend**: Python with FastAPI for seamless API development and hosting.
+**Frontend**: Flutter for building a user-friendly interface that works across platforms.
+**Machine Learning**: Scikit-learn for training and deploying the Decision Tree model.
+
+
+**App Setup and Deployment**
+**Prerequisites**
+
 Ensure the following tools are installed on your system:
 
 Python (Version 3.8 or later)
