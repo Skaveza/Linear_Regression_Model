@@ -113,9 +113,7 @@ Click **"Predict"**: The app sends the data to the backend API, which uses the D
 
 View the Results:
 
-Predicted life expectancy
-
-Risk level (e.g., "Low", "Moderate", "High")
+Predicted life expectancy (e.g., "Low", "Moderate", "High")
 
 ## Contributing
 We welcome contributions to improve the app. To contribute:
