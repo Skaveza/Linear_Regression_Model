@@ -13,9 +13,13 @@ The data used in this project is sourced from **Kaggle**.
 The dataset includes the following health-related indicators:
 
 **Life Expectancy** : The target variable, representing the average number of years a person is expected to live.
+
 **Adult Mortality**: A measure of the likelihood of death among adults aged 15–60 years.
+
 **Schooling**: Average years of schooling.
+
 **Total Expenditure**: Government expenditure on healthcare as a percentage of GDP.
+
 **BMI**: Body Mass Index, a common indicator of body fat.
 
 | Life expectancy | Adult Mortality | Schooling | Total expenditure | BMI  |
