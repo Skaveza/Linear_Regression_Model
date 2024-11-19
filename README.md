@@ -46,7 +46,9 @@ This model was chosen for integration into the app.
 The app leverages a robust backend and interactive frontend:
 
 **Backend**: Python with FastAPI for seamless API development and hosting.
+
 **Frontend**: Flutter for building a user-friendly interface that works across platforms.
+
 **Machine Learning**: Scikit-learn for training and deploying the Decision Tree model.
 
 ## App Setup and Deployment
