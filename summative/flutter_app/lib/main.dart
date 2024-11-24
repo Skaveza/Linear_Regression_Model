@@ -163,14 +163,14 @@ class LifeExpectancyScreenState extends State<LifeExpectancyScreen> {
                 TextFormField(
                   controller: _adultMortalityController,
                   decoration: const InputDecoration(
-                    hintText: 'Enter Adult Mortality (73 - 723)',
+                    hintText: 'Enter Adult Mortality (0 - 150)',
                     border: OutlineInputBorder(),
                   ),
                   keyboardType: TextInputType.number,
                   validator: (value) {
                     final double? mortality = double.tryParse(value ?? '');
-                    if (mortality == null || mortality < 73 || mortality > 723) {
-                      return 'Please enter a value between 73 and 723';
+                    if (mortality == null || mortality < 0 || mortality > 150) {
+                      return 'Please enter a value between 0 and 150';
                     }
                     return null;
                   },
@@ -181,14 +181,14 @@ class LifeExpectancyScreenState extends State<LifeExpectancyScreen> {
                 TextFormField(
                   controller: _schoolingController,
                   decoration: const InputDecoration(
-                    hintText: 'Enter years of schooling (9.2 - 10.1)',
+                    hintText: 'Enter years of schooling (0 - 40)',
                     border: OutlineInputBorder(),
                   ),
                   keyboardType: TextInputType.number,
                   validator: (value) {
                     final double? schooling = double.tryParse(value ?? '');
-                    if (schooling == null || schooling < 9.2 || schooling > 10.1) {
-                      return 'Please enter a value between 9.2 and 10.1';
+                    if (schooling == null || schooling < 0 || schooling > 40) {
+                      return 'Please enter a value between 0 and 40';
                     }
                     return null;
                   },
@@ -199,14 +199,14 @@ class LifeExpectancyScreenState extends State<LifeExpectancyScreen> {
                 TextFormField(
                   controller: _totalExpenditureController,
                   decoration: const InputDecoration(
-                    hintText: 'Enter total expenditure (6.16 - 8.52)',
+                    hintText: 'Enter total expenditure (0 - 1000000)',
                     border: OutlineInputBorder(),
                   ),
                   keyboardType: TextInputType.number,
                   validator: (value) {
                     final double? expenditure = double.tryParse(value ?? '');
-                    if (expenditure == null || expenditure < 6.16 || expenditure > 8.52) {
-                      return 'Please enter a value between 6.16 and 8.52';
+                    if (expenditure == null || expenditure < 0|| expenditure > 1000000) {
+                      return 'Please enter a value between 0 and 1000000';
                     }
                     return null;
                   },
@@ -217,14 +217,14 @@ class LifeExpectancyScreenState extends State<LifeExpectancyScreen> {
                 TextFormField(
                   controller: _bmiController,
                   decoration: const InputDecoration(
-                    hintText: 'Enter BMI (17.2 - 27.1)',
+                    hintText: 'Enter BMI (0 - 100)',
                     border: OutlineInputBorder(),
                   ),
                   keyboardType: TextInputType.number,
                   validator: (value) {
                     final double? bmi = double.tryParse(value ?? '');
-                    if (bmi == null || bmi < 17.2 || bmi > 27.1) {
-                      return 'Please enter a value between 17.2 and 27.1';
+                    if (bmi == null || bmi < 0 || bmi > 100) {
+                      return 'Please enter a value between 0 and 100';
                     }
                     return null;
                   },
