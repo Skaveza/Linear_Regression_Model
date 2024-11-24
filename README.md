@@ -3,6 +3,9 @@
 ## API Endpoint
 https://uhai.onrender.com
 
+## Demo Video
+https://www.loom.com/share/af8734a7a7544c02b3706cfe8b32ebe5?sid=c9055e78-6e70-4015-bb4f-5d26f57c2eeb
+
 ## Mission Statement
 My mission is to integrate *technology* and *healthcare* to empower individuals and organizations with data-driven insights, improving the understanding and prediction of critical health outcomes such as life expectancy
 
