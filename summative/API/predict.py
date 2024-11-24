@@ -34,7 +34,7 @@ class PredictionRequest(BaseModel):
 @app.post("/predict/")
 async def predict(data: PredictionRequest):
     try:
-        # Prepare input for the model
+        # Prepare input 
         input_data = [[data.Adult_Mortality, data.Schooling, data.Total_expenditure, data.BMI]]
         
         # Make prediction
