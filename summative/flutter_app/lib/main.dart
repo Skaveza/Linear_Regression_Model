@@ -63,21 +63,21 @@ class LifeExpectancyScreenState extends State<LifeExpectancyScreen> {
       );
 
       if (response.statusCode == 200) {
-        print(response.body); // Debugging line
+        // Debugging line
         final Map<String, dynamic> data = jsonDecode(response.body);
         setState(() {
           _prediction = (data['prediction'] ?? 'No prediction').toString();
           _lifeexpectancy = data['life_expectancy'] ?? 'Unknown';
         });
       } else {
-        print('Error: ${response.statusCode}, ${response.body}'); // Debugging line
+        
         setState(() {
           _prediction = 'Error in prediction';
           _lifeexpectancy = 'Unknown';
         });
       }
     } catch (e) {
-      print('Exception: $e'); // Debugging line
+      
       setState(() {
         _prediction = 'An error occurred';
         _lifeexpectancy = 'Unknown';
